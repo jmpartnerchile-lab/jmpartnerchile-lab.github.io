@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pistazo — Política de privacidad / Privacy Policy</title>
+<style>
+  :root { --bg: #15121F; --card: #FFF7E8; --ink: #15121F; --acc: #FFD23F; --pink: #FF5C8A; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; padding: 20px 14px 40px; }
+  main { max-width: 760px; margin: 0 auto; background: var(--card); border: 4px solid #000; border-radius: 18px; box-shadow: 0 6px 0 #000; padding: 22px 22px 28px; }
+  h1 { margin: 0 0 4px; font-size: 26px; line-height: 1.2; }
+  h2 { font-size: 18px; margin: 26px 0 6px; }
+  .meta { color: #555; font-size: 14px; margin: 0 0 16px; }
+  nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 auto 16px; max-width: 760px; }
+  nav button { font: inherit; font-size: 14px; font-weight: 700; padding: 6px 10px; border: 3px solid #000; border-radius: 10px; background: var(--card); cursor: pointer; }
+  nav button[aria-pressed="true"] { background: var(--acc); }
+  a { color: #B0204D; }
+  ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+<nav id="langs" aria-label="Language"></nav>
+<main id="doc"></main>
+<script>
+const L = {
+es: { name: 'Español', title: 'Política de privacidad de Pistazo', meta: 'Desarrollador: JMPartnerChile · Vigente desde el 1 de noviembre de 2026',
+  s: [
+   ['1. Quiénes somos', 'Pistazo es un juego de JMPartnerChile (Nova Games). Esta política explica qué datos se tratan cuando usas la app.'],
+   ['2. Datos que guardamos', 'Pistazo no pide registro, nombre ni correo, y no tiene servidores propios. Tu progreso, monedas, cartas, récords (con las iniciales que escribas) y preferencias se guardan solo en tu dispositivo. Si desinstalas la app, se borran.'],
+   ['3. Publicidad de terceros (Google AdMob)', 'El juego muestra anuncios de Google AdMob. Para mostrarlos y medirlos, Google puede tratar: el identificador de publicidad del dispositivo, la dirección IP y una ubicación aproximada derivada de ella, información del dispositivo (modelo, sistema, idioma) e interacciones con los anuncios. Estos datos viajan cifrados y se comparten con Google para publicidad, análisis y prevención de fraude. Más información: <a href="https://policies.google.com/technologies/ads">cómo usa Google los datos en la publicidad</a> y <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>.'],
+   ['4. Consentimiento y tus opciones', 'Donde la ley lo exige (por ejemplo, en el Espacio Económico Europeo y el Reino Unido), el juego te pide consentimiento antes de mostrar anuncios personalizados. Puedes cambiar tu elección en Configuración → Preferencias de anuncios. También puedes restablecer o eliminar tu ID de publicidad en Ajustes de Android → Google → Anuncios.'],
+   ['5. Menores', 'Pistazo está dirigido a personas de 13 años o más y no recopila a sabiendas datos de menores de 13 años. Si crees que un menor nos dio datos, escríbenos y los eliminaremos.'],
+   ['6. Seguridad y conservación', 'Los datos del juego quedan en tu dispositivo, protegidos por el sistema Android. Los datos que trata Google se rigen por sus propias políticas de conservación.'],
+   ['7. Cambios a esta política', 'Si cambiamos esta política, publicaremos la nueva versión en esta página con su fecha de vigencia.'],
+   ['8. Contacto', 'Si tienes preguntas, escribe a <a href="mailto:jmpartnerchile@gmail.com">jmpartnerchile@gmail.com</a>.'] ] },
+en: { name: 'English', title: 'Pistazo Privacy Policy', meta: 'Developer: JMPartnerChile · Effective November 1, 2026',
+  s: [
+   ['1. Who we are', 'Pistazo is a game by JMPartnerChile (Nova Games). This policy explains what data is processed when you use the app.'],
+   ['2. Data we store', 'Pistazo asks for no sign-up, name or email, and has no servers of its own. Your progress, coins, cards, high scores (with the initials you type) and settings are stored only on your device. Uninstalling the app deletes them.'],
+   ['3. Third-party ads (Google AdMob)', 'The game shows ads from Google AdMob. To serve and measure them, Google may process: the device advertising ID, IP address and an approximate location derived from it, device information (model, OS, language) and ad interactions. This data is encrypted in transit and shared with Google for advertising, analytics and fraud prevention. Learn more: <a href="https://policies.google.com/technologies/ads">how Google uses data in advertising</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.'],
+   ['4. Consent and your choices', 'Where required by law (for example in the European Economic Area and the UK), the game asks for your consent before showing personalized ads. You can change your choice in Settings → Ad preferences. You can also reset or delete your advertising ID in Android Settings → Google → Ads.'],
+   ['5. Children', 'Pistazo is intended for people aged 13 and over and does not knowingly collect data from children under 13. If you believe a child has given us data, contact us and we will delete it.'],
+   ['6. Security and retention', 'Game data stays on your device, protected by Android. Data processed by Google follows Google\'s own retention policies.'],
+   ['7. Changes', 'If we change this policy, we will post the new version on this page with its effective date.'],
+   ['8. Contact', 'Questions? Write to <a href="mailto:jmpartnerchile@gmail.com">jmpartnerchile@gmail.com</a>.'] ] },
+pt: { name: 'Português', title: 'Política de privacidade do Pistazo', meta: 'Desenvolvedor: JMPartnerChile · Em vigor desde 1º de novembro de 2026',
+  s: [
+   ['1. Quem somos', 'Pistazo é um jogo da JMPartnerChile (Nova Games). Esta política explica quais dados são tratados quando você usa o app.'],
+   ['2. Dados que guardamos', 'O Pistazo não pede cadastro, nome nem e-mail e não tem servidores próprios. Seu progresso, moedas, cartas, recordes (com as iniciais que você digitar) e preferências ficam salvos apenas no seu dispositivo. Ao desinstalar o app, eles são apagados.'],
+   ['3. Anúncios de terceiros (Google AdMob)', 'O jogo exibe anúncios do Google AdMob. Para exibi-los e medi-los, o Google pode tratar: o ID de publicidade do dispositivo, o endereço IP e uma localização aproximada derivada dele, informações do dispositivo (modelo, sistema, idioma) e interações com anúncios. Esses dados trafegam criptografados e são compartilhados com o Google para publicidade, análise e prevenção de fraudes. Saiba mais: <a href="https://policies.google.com/technologies/ads">como o Google usa dados em publicidade</a> e a <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>.'],
+   ['4. Consentimento e suas opções', 'Onde a lei exige (por exemplo, no Espaço Econômico Europeu e no Reino Unido), o jogo pede seu consentimento antes de exibir anúncios personalizados. Você pode mudar sua escolha em Configurações → Preferências de anúncios. Também pode redefinir ou excluir seu ID de publicidade em Configurações do Android → Google → Anúncios.'],
+   ['5. Menores', 'O Pistazo é destinado a pessoas com 13 anos ou mais e não coleta intencionalmente dados de menores de 13 anos. Se você acredita que um menor nos forneceu dados, fale conosco e os excluiremos.'],
+   ['6. Segurança e retenção', 'Os dados do jogo ficam no seu dispositivo, protegidos pelo Android. Os dados tratados pelo Google seguem as políticas de retenção do Google.'],
+   ['7. Alterações', 'Se mudarmos esta política, publicaremos a nova versão nesta página com a data de vigência.'],
+   ['8. Contato', 'Dúvidas? Escreva para <a href="mailto:jmpartnerchile@gmail.com">jmpartnerchile@gmail.com</a>.'] ] },
+it: { name: 'Italiano', title: 'Informativa sulla privacy di Pistazo', meta: 'Sviluppatore: JMPartnerChile · In vigore dal 1° novembre 2026',
+  s: [
+   ['1. Chi siamo', 'Pistazo è un gioco di JMPartnerChile (Nova Games). Questa informativa spiega quali dati vengono trattati quando usi l\'app.'],
+   ['2. Dati che conserviamo', 'Pistazo non richiede registrazione, nome o email e non ha server propri. Progressi, monete, carte, record (con le iniziali che scrivi) e preferenze sono salvati solo sul tuo dispositivo. Disinstallando l\'app vengono cancellati.'],
+   ['3. Pubblicità di terzi (Google AdMob)', 'Il gioco mostra annunci di Google AdMob. Per mostrarli e misurarli, Google può trattare: l\'ID pubblicità del dispositivo, l\'indirizzo IP e una posizione approssimativa ricavata da esso, informazioni sul dispositivo (modello, sistema, lingua) e interazioni con gli annunci. I dati viaggiano cifrati e sono condivisi con Google per pubblicità, analisi e prevenzione delle frodi. Maggiori informazioni: <a href="https://policies.google.com/technologies/ads">come Google usa i dati nella pubblicità</a> e <a href="https://policies.google.com/privacy">Norme sulla privacy di Google</a>.'],
+   ['4. Consenso e scelte', 'Dove la legge lo richiede (ad esempio nello Spazio economico europeo e nel Regno Unito), il gioco chiede il consenso prima di mostrare annunci personalizzati. Puoi cambiare la scelta in Impostazioni → Preferenze annunci. Puoi anche reimpostare o eliminare l\'ID pubblicità in Impostazioni Android → Google → Annunci.'],
+   ['5. Minori', 'Pistazo è destinato a persone dai 13 anni in su e non raccoglie consapevolmente dati di minori di 13 anni. Se ritieni che un minore ci abbia fornito dati, contattaci e li elimineremo.'],
+   ['6. Sicurezza e conservazione', 'I dati di gioco restano sul tuo dispositivo, protetti da Android. I dati trattati da Google seguono le politiche di conservazione di Google.'],
+   ['7. Modifiche', 'Se modifichiamo questa informativa, pubblicheremo la nuova versione in questa pagina con la data di entrata in vigore.'],
+   ['8. Contatti', 'Domande? Scrivi a <a href="mailto:jmpartnerchile@gmail.com">jmpartnerchile@gmail.com</a>.'] ] },
+fr: { name: 'Français', title: 'Politique de confidentialité de Pistazo', meta: 'Développeur : JMPartnerChile · En vigueur depuis le 1er novembre 2026',
+  s: [
+   ['1. Qui sommes-nous', 'Pistazo est un jeu de JMPartnerChile (Nova Games). Cette politique explique quelles données sont traitées lorsque vous utilisez l\'application.'],
+   ['2. Données conservées', 'Pistazo ne demande ni inscription, ni nom, ni e-mail, et n\'a pas de serveurs propres. Votre progression, vos pièces, cartes, records (avec les initiales saisies) et préférences sont enregistrés uniquement sur votre appareil. Ils sont supprimés si vous désinstallez l\'application.'],
+   ['3. Publicité de tiers (Google AdMob)', 'Le jeu affiche des annonces Google AdMob. Pour les diffuser et les mesurer, Google peut traiter : l\'identifiant publicitaire de l\'appareil, l\'adresse IP et une localisation approximative qui en découle, des informations sur l\'appareil (modèle, système, langue) et les interactions avec les annonces. Ces données sont chiffrées en transit et partagées avec Google à des fins de publicité, d\'analyse et de prévention de la fraude. En savoir plus : <a href="https://policies.google.com/technologies/ads">utilisation des données dans la publicité par Google</a> et <a href="https://policies.google.com/privacy">Règles de confidentialité de Google</a>.'],
+   ['4. Consentement et choix', 'Lorsque la loi l\'exige (par exemple dans l\'Espace économique européen et au Royaume-Uni), le jeu demande votre consentement avant d\'afficher des annonces personnalisées. Vous pouvez modifier votre choix dans Paramètres → Préférences publicitaires. Vous pouvez aussi réinitialiser ou supprimer votre identifiant publicitaire dans Paramètres Android → Google → Annonces.'],
+   ['5. Mineurs', 'Pistazo s\'adresse aux personnes de 13 ans et plus et ne collecte pas sciemment de données d\'enfants de moins de 13 ans. Si vous pensez qu\'un enfant nous a transmis des données, contactez-nous et nous les supprimerons.'],
+   ['6. Sécurité et conservation', 'Les données du jeu restent sur votre appareil, protégées par Android. Les données traitées par Google suivent ses propres règles de conservation.'],
+   ['7. Modifications', 'Si nous modifions cette politique, nous publierons la nouvelle version sur cette page avec sa date d\'entrée en vigueur.'],
+   ['8. Contact', 'Des questions ? Écrivez à <a href="mailto:jmpartnerchile@gmail.com">jmpartnerchile@gmail.com</a>.'] ] },
+de: { name: 'Deutsch', title: 'Datenschutzerklärung von Pistazo', meta: 'Entwickler: JMPartnerChile · Gültig ab 1. November 2026',
+  s: [
+   ['1. Wer wir sind', 'Pistazo ist ein Spiel von JMPartnerChile (Nova Games). Diese Erklärung beschreibt, welche Daten bei der Nutzung der App verarbeitet werden.'],
+   ['2. Gespeicherte Daten', 'Pistazo verlangt keine Registrierung, keinen Namen und keine E-Mail und hat keine eigenen Server. Fortschritt, Münzen, Karten, Bestenliste (mit den eingegebenen Initialen) und Einstellungen werden nur auf deinem Gerät gespeichert. Beim Deinstallieren werden sie gelöscht.'],
+   ['3. Werbung von Drittanbietern (Google AdMob)', 'Das Spiel zeigt Anzeigen von Google AdMob. Um sie auszuliefern und zu messen, kann Google Folgendes verarbeiten: die Werbe-ID des Geräts, die IP-Adresse und einen daraus abgeleiteten ungefähren Standort, Geräteinformationen (Modell, System, Sprache) und Interaktionen mit Anzeigen. Die Daten werden verschlüsselt übertragen und mit Google für Werbung, Analyse und Betrugsprävention geteilt. Mehr dazu: <a href="https://policies.google.com/technologies/ads">Wie Google Daten für Werbung nutzt</a> und <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>.'],
+   ['4. Einwilligung und Wahlmöglichkeiten', 'Wo es gesetzlich vorgeschrieben ist (z. B. im Europäischen Wirtschaftsraum und im Vereinigten Königreich), fragt das Spiel nach deiner Einwilligung, bevor personalisierte Anzeigen gezeigt werden. Du kannst deine Wahl unter Einstellungen → Anzeigeneinstellungen ändern. Außerdem kannst du deine Werbe-ID unter Android-Einstellungen → Google → Anzeigen zurücksetzen oder löschen.'],
+   ['5. Kinder', 'Pistazo richtet sich an Personen ab 13 Jahren und erhebt nicht wissentlich Daten von Kindern unter 13 Jahren. Wenn du glaubst, dass uns ein Kind Daten gegeben hat, kontaktiere uns und wir löschen sie.'],
+   ['6. Sicherheit und Speicherdauer', 'Die Spieldaten bleiben auf deinem Gerät, geschützt durch Android. Von Google verarbeitete Daten unterliegen den Aufbewahrungsrichtlinien von Google.'],
+   ['7. Änderungen', 'Wenn wir diese Erklärung ändern, veröffentlichen wir die neue Fassung auf dieser Seite mit ihrem Gültigkeitsdatum.'],
+   ['8. Kontakt', 'Fragen? Schreib an <a href="mailto:jmpartnerchile@gmail.com">jmpartnerchile@gmail.com</a>.'] ] },
+zh: { name: '中文', title: 'Pistazo 隐私政策', meta: '开发者：JMPartnerChile · 自 2026 年 11 月 1 日起生效',
+  s: [
+   ['1. 关于我们', 'Pistazo 是 JMPartnerChile（Nova Games）开发的游戏。本政策说明你使用本应用时会处理哪些数据。'],
+   ['2. 我们保存的数据', 'Pistazo 无需注册，不收集姓名或电子邮件，也没有自己的服务器。你的进度、金币、卡片、最高分（含你输入的缩写）和设置仅保存在你的设备上。卸载应用后这些数据将被删除。'],
+   ['3. 第三方广告（Google AdMob）', '本游戏展示 Google AdMob 广告。为投放和衡量广告，Google 可能会处理：设备广告 ID、IP 地址及由此推断的大致位置、设备信息（型号、系统、语言）以及广告互动。这些数据经加密传输，并与 Google 共享用于广告、分析和防欺诈。了解更多：<a href="https://policies.google.com/technologies/ads">Google 如何在广告中使用数据</a>和 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>。'],
+   ['4. 同意与你的选择', '在法律要求的地区（例如欧洲经济区和英国），游戏会在展示个性化广告前征求你的同意。你可以在“设置 → 广告偏好”中更改选择，也可以在 Android 设置 → Google → 广告中重置或删除广告 ID。'],
+   ['5. 儿童', 'Pistazo 面向 13 岁及以上人士，不会有意收集 13 岁以下儿童的数据。如果你认为有儿童向我们提供了数据，请联系我们，我们会将其删除。'],
+   ['6. 安全与保存', '游戏数据保存在你的设备上，受 Android 系统保护。Google 处理的数据遵循 Google 自己的保存政策。'],
+   ['7. 政策变更', '如果我们修改本政策，会在此页面发布新版本并注明生效日期。'],
+   ['8. 联系我们', '如有疑问，请发送邮件至 <a href="mailto:jmpartnerchile@gmail.com">jmpartnerchile@gmail.com</a>。'] ] },
+ja: { name: '日本語', title: 'Pistazo プライバシーポリシー', meta: '開発者：JMPartnerChile · 2026年11月1日発効',
+  s: [
+   ['1. 運営者', 'Pistazo は JMPartnerChile（Nova Games）が提供するゲームです。本ポリシーでは、アプリ使用時に扱われるデータについて説明します。'],
+   ['2. 保存するデータ', 'Pistazo は登録、氏名、メールアドレスを求めず、独自のサーバーも持ちません。進行状況、コイン、カード、ハイスコア（入力したイニシャルを含む）、設定はお使いの端末内にのみ保存されます。アプリをアンインストールすると削除されます。'],
+   ['3. 第三者の広告（Google AdMob）', '本ゲームは Google AdMob の広告を表示します。広告の配信と測定のため、Google は次のデータを扱う場合があります：端末の広告 ID、IP アドレスとそこから推定されるおおよその位置、端末情報（機種、OS、言語）、広告への操作。これらのデータは暗号化して送信され、広告、分析、不正防止のために Google と共有されます。詳細：<a href="https://policies.google.com/technologies/ads">Google の広告におけるデータの使用</a>、<a href="https://policies.google.com/privacy">Google プライバシー ポリシー</a>。'],
+   ['4. 同意と選択', '法律で求められる地域（欧州経済領域や英国など）では、パーソナライズ広告を表示する前に同意を求めます。設定 → 広告の設定 で選択を変更できます。また、Android の設定 → Google → 広告 で広告 ID をリセットまたは削除できます。'],
+   ['5. 子ども', 'Pistazo は13歳以上を対象としており、13歳未満の子どものデータを意図的に収集することはありません。子どもがデータを提供したと思われる場合はご連絡ください。削除いたします。'],
+   ['6. 安全性と保存期間', 'ゲームデータは端末内に保存され、Android によって保護されます。Google が扱うデータは Google の保存ポリシーに従います。'],
+   ['7. 変更', '本ポリシーを変更する場合は、新しい版を発効日とともにこのページに掲載します。'],
+   ['8. お問い合わせ', 'ご質問は <a href="mailto:jmpartnerchile@gmail.com">jmpartnerchile@gmail.com</a> までお送りください。'] ] },
+ko: { name: '한국어', title: 'Pistazo 개인정보처리방침', meta: '개발자: JMPartnerChile · 2026년 11월 1일부터 시행',
+  s: [
+   ['1. 운영자', 'Pistazo는 JMPartnerChile(Nova Games)의 게임입니다. 이 방침은 앱 사용 시 처리되는 데이터를 설명합니다.'],
+   ['2. 저장하는 데이터', 'Pistazo는 가입, 이름, 이메일을 요구하지 않으며 자체 서버가 없습니다. 진행 상황, 코인, 카드, 최고 기록(입력한 이니셜 포함), 설정은 기기에만 저장됩니다. 앱을 삭제하면 함께 삭제됩니다.'],
+   ['3. 제3자 광고(Google AdMob)', '이 게임은 Google AdMob 광고를 표시합니다. 광고 게재와 측정을 위해 Google은 기기 광고 ID, IP 주소 및 이를 통해 추정한 대략적인 위치, 기기 정보(모델, 운영체제, 언어), 광고 상호작용을 처리할 수 있습니다. 이 데이터는 암호화되어 전송되며 광고, 분석, 부정행위 방지를 위해 Google과 공유됩니다. 자세히 보기: <a href="https://policies.google.com/technologies/ads">Google의 광고 데이터 사용 방식</a>, <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>.'],
+   ['4. 동의 및 선택', '법률이 요구하는 지역(예: 유럽경제지역, 영국)에서는 맞춤 광고를 표시하기 전에 동의를 요청합니다. 설정 → 광고 환경설정에서 선택을 변경할 수 있습니다. Android 설정 → Google → 광고에서 광고 ID를 재설정하거나 삭제할 수도 있습니다.'],
+   ['5. 아동', 'Pistazo는 13세 이상을 대상으로 하며 13세 미만 아동의 데이터를 고의로 수집하지 않습니다. 아동이 데이터를 제공했다고 생각되면 연락해 주세요. 삭제하겠습니다.'],
+   ['6. 보안 및 보관', '게임 데이터는 기기에 남아 Android의 보호를 받습니다. Google이 처리하는 데이터는 Google의 보관 정책을 따릅니다.'],
+   ['7. 변경', '이 방침을 변경하면 시행일과 함께 새 버전을 이 페이지에 게시합니다.'],
+   ['8. 문의', '문의 사항은 <a href="mailto:jmpartnerchile@gmail.com">jmpartnerchile@gmail.com</a>으로 보내 주세요.'] ] },
+};
+const nav = document.getElementById('langs'), doc = document.getElementById('doc');
+function show(code) {
+  const d = L[code] || L.en;
+  document.documentElement.lang = code;
+  document.title = 'Pistazo — ' + d.title;
+  doc.innerHTML = '<h1>' + d.title + '</h1><p class="meta">' + d.meta + '</p>' + d.s.map(([h, p]) => '<h2>' + h + '</h2><p>' + p + '</p>').join('');
+  nav.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.l === code)));
+  history.replaceState(null, '', '#' + code);
+}
+for (const [code, d] of Object.entries(L)) {
+  const b = document.createElement('button');
+  b.textContent = d.name; b.dataset.l = code; b.onclick = () => show(code);
+  nav.appendChild(b);
+}
+const wanted = location.hash.slice(1) || (navigator.language || 'es').slice(0, 2);
+show(L[wanted] ? wanted : 'es');
+</script>
+<noscript><main><h1>Pistazo — Política de privacidad</h1><p>Pistazo (JMPartnerChile) no recopila datos personales propios; el progreso se guarda solo en el dispositivo. Muestra anuncios de Google AdMob, que puede tratar el ID de publicidad, la IP y datos del dispositivo (<a href="https://policies.google.com/privacy">política de Google</a>). Contacto: jmpartnerchile@gmail.com</p></main></noscript>
+</body>
+</html>
